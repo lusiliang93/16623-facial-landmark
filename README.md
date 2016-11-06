@@ -30,14 +30,20 @@
      - A similar project has been done before in this course. Therefore, if we can follow the schedule strictly, we can complete the project on time.
      - We have found at least two open sources and each of them has a detailed paper to read. As long as we can understand, it can be finished on time.
      
--Schedule:
+- Schedule:
  - Nov.7 - Nov.13  Literature review and find facial landmark open sources 
-- Nov.14 - Nov.16 Basic version of facial landmark in Xcode
-- Nov.17 - Nov. 23 Advanced version with speedup
-- Nov.24 - Dec.1   Add additional function like head pose estimation
-- Dec.2 - Dec. 6 Design a simple UI, speed benchmark and make the demo 
-- Dec.7 Prepare for presentation 
-= Dec.8 - Dec. 11 Write final report
+ - Nov.14 - Nov.16 Basic version of facial landmark in Xcode
+ - Nov.17 - Nov. 23 Advanced version with speedup
+ - Nov.24 - Dec.1   Add additional function like head pose estimation
+ - Dec.2 - Dec. 6 Design a simple UI, speed benchmark and make the demo 
+ - Dec.7 Prepare for presentation 
+ - Dec.8 - Dec. 11 Write final report
+
+- References:
+ - [1] Ren, Shaoqing, Xudong Cao, Yichen Wei, and Jian Sun. "Face alignment at 3000 fps via regressing local binary features." In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1685-1692. 2014.
+ - [2] https://github.com/yulequan/face-alignment-in-3000fps
+ - [3] https://developer.apple.com/metal/ 
+ - [4] https://github.com/TadasBaltrusaitis/OpenFace.git
 
      - 
 
