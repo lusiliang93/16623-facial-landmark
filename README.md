@@ -22,7 +22,7 @@
      - We have to speed up the basic version at least 5 times using Accelerate Framework
   - Extra goals:
      - We would try to learn Metal API and get much faster version 
-     - We would add additional function like heat pose estimation
+     - We would add additional function like head pose estimation
   - Evaluations:
      - The successful version is that it can realize facial landmark tracking in real time.
      - We will do speed benchmark by comparing execution time running the basic version, the version using Accelerate Frame and the version using Metal API.
