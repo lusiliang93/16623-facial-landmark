@@ -15,3 +15,29 @@
    - How to modify the original codes so as to efficiently implement Accelerate Framework;
    - Learn how to use Metal API so as to check if it is feasible to use Metal to get access to the GPU to realize the speedup.
 
+- Goals and Deliverables
+  - Goals:
+     - We must successfully develop a facial landmark iOS app
+     - We have to speed up the basic version at least 5 times using Accelerate Framework
+  - Extra goals:
+     - We would try to learn Metal API and get much faster version 
+     - We would add additional function like heat pose estimation
+  - Evaluations:
+     - The successful version is that it can realize facial landmark tracking in real time.
+     - We will do speed benchmark by comparing execution time running the basic version, the version using Accelerate Frame and the version using Metal API.
+     - We will make a demo to show how to use the app.
+  - Feasibility:
+     - A similar project has been done before in this course. Therefore, if we can follow the schedule strictly, we can complete the project on time.
+     - We have found at least two open sources and each of them has a detailed paper to read. As long as we can understand, it can be finished on time.
+     
+-Schedule:
+ - Nov.7 - Nov.13  Literature review and find facial landmark open sources 
+- Nov.14 - Nov.16 Basic version of facial landmark in Xcode
+- Nov.17 - Nov. 23 Advanced version with speedup
+- Nov.24 - Dec.1   Add additional function like head pose estimation
+- Dec.2 - Dec. 6 Design a simple UI, speed benchmark and make the demo 
+- Dec.7 Prepare for presentation 
+= Dec.8 - Dec. 11 Write final report
+
+     - 
+
