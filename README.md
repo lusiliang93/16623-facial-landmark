@@ -41,10 +41,13 @@
  - Dec.8 - Dec. 11 Write final report
 
 - References:
- - [1] Ren, Shaoqing, Xudong Cao, Yichen Wei, and Jian Sun. "Face alignment at 3000 fps via regressing local binary features." In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1685-1692. 2014.
- - [2] https://github.com/yulequan/face-alignment-in-3000fps
- - [3] https://developer.apple.com/metal/ 
- - [4] https://github.com/TadasBaltrusaitis/OpenFace.git
 
-     - 
+  [1] Ren, Shaoqing, Xudong Cao, Yichen Wei, and Jian Sun. "Face alignment at 3000 fps via regressing local binary features." In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1685-1692. 2014.
+  
+  [2] https://github.com/yulequan/face-alignment-in-3000fps
+  
+  [3] https://developer.apple.com/metal/ 
+  
+  [4] https://github.com/TadasBaltrusaitis/OpenFace.git
+
 
