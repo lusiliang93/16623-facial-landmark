@@ -50,4 +50,7 @@
   
   [4] https://github.com/TadasBaltrusaitis/OpenFace.git
 
+  [5] “Constrained Local Neural Fields for robust facial landmark detection in the wild” Tadas Baltrušaitis, Peter Robinson, and Louis-Philippe Morency. in IEEE Int. Conference on Computer Vision Workshops, 300 Faces in-the-Wild Challenge, 2013.
+  
+  [6] https://github.com/luoyetx/deep-landmark
 
