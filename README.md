@@ -3,6 +3,7 @@
       - Our project aims to achieve a facial landmark Computer Vision Application for iOS Mobile Devices. We also want to speed up the performance by applying parallel computing methods.
       - Our project aims to design a fast facial landmark/ face alignment application in iOS devices. The application will use learning-based approach. We will use Accelerate Framework to make use of SIMD operations and might use Metal API to get access to the GPU. 
 - Background
+
   Facial landmark is an application of facial analysis in computer vision. It involves locating the face in an image and marking the accurate position of different facial features. It is also referred to as “face alignment” or “facial keypoint detection”. It has many interesting and potential applications such as face morphing, head pose estimation and virtual makeover.
   Based on the paper named Face Alignment at 3000 FPS via Regressing Local Binary Features, 
   In addition, the paper itself proposed a new approach which regularizes learning with a “locality” principle. In detail, since the local binary features are tree based and highly sparse, the process of extracting and regressing such features are extremely rapid[1,2]. It is reported in the paper that the proposed face alignment system can achieve 300 fps on a mobile phone for locating a few dozens of landmarks. 
