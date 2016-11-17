@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52732FC21C0CCCBA00185F70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52732FC11C0CCCBA00185F70 /* main.m */; };
+		52732FC51C0CCCBA00185F70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52732FC41C0CCCBA00185F70 /* AppDelegate.m */; };
+		52732FC81C0CCCBA00185F70 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52732FC71C0CCCBA00185F70 /* ViewController.mm */; };
+		52732FCB1C0CCCBA00185F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52732FC91C0CCCBA00185F70 /* Main.storyboard */; };
+		52732FCD1C0CCCBA00185F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52732FCC1C0CCCBA00185F70 /* Assets.xcassets */; };
+		52732FD01C0CCCBA00185F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52732FCE1C0CCCBA00185F70 /* LaunchScreen.storyboard */; };
+		52732FDB1C0CCCBA00185F70 /* Smerk_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52732FDA1C0CCCBA00185F70 /* Smerk_ExampleTests.m */; };
+		52732FE61C0CCCBA00185F70 /* Smerk_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52732FE51C0CCCBA00185F70 /* Smerk_ExampleUITests.m */; };
+		52D1A56A1C0CCFD800B4AA1F /* SMKDetectionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D1A5691C0CCFD800B4AA1F /* SMKDetectionCamera.m */; };
+		52D1A5721C0CCFEB00B4AA1F /* SMKDetectionCamera+BlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D1A56D1C0CCFEB00B4AA1F /* SMKDetectionCamera+BlockDelegate.m */; };
+		52D1A5731C0CCFEB00B4AA1F /* SMKDetectionCamera+BufferHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D1A56F1C0CCFEB00B4AA1F /* SMKDetectionCamera+BufferHandler.m */; };
+		52D1A5741C0CCFEB00B4AA1F /* SMKDetectionCamera+MetadataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D1A5711C0CCFEB00B4AA1F /* SMKDetectionCamera+MetadataHandler.m */; };
+		52D1A5761C0CD03700B4AA1F /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1A5751C0CD03700B4AA1F /* GPUImage.framework */; };
+		52D1A5781C0CD07600B4AA1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1A5771C0CD07600B4AA1F /* QuartzCore.framework */; };
+		52D1A57A1C0CD08000B4AA1F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1A5791C0CD08000B4AA1F /* AVFoundation.framework */; };
+		52D1A57C1C0CD08B00B4AA1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1A57B1C0CD08B00B4AA1F /* OpenGLES.framework */; };
+		52D1A57E1C0CD09500B4AA1F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1A57D1C0CD09500B4AA1F /* CoreVideo.framework */; };
+		52D1A5801C0CD09E00B4AA1F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1A57F1C0CD09E00B4AA1F /* CoreMedia.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52732FD71C0CCCBA00185F70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52732FB51C0CCCBA00185F70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52732FBC1C0CCCBA00185F70;
+			remoteInfo = Smerk_Example;
+		};
+		52732FE21C0CCCBA00185F70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52732FB51C0CCCBA00185F70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52732FBC1C0CCCBA00185F70;
+			remoteInfo = Smerk_Example;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52732FBD1C0CCCBA00185F70 /* Smerk_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smerk_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52732FC11C0CCCBA00185F70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52732FC31C0CCCBA00185F70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52732FC41C0CCCBA00185F70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52732FC61C0CCCBA00185F70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		52732FC71C0CCCBA00185F70 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		52732FCA1C0CCCBA00185F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52732FCC1C0CCCBA00185F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52732FCF1C0CCCBA00185F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52732FD11C0CCCBA00185F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52732FD61C0CCCBA00185F70 /* Smerk_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Smerk_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52732FDA1C0CCCBA00185F70 /* Smerk_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Smerk_ExampleTests.m; sourceTree = "<group>"; };
+		52732FDC1C0CCCBA00185F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52732FE11C0CCCBA00185F70 /* Smerk_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Smerk_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52732FE51C0CCCBA00185F70 /* Smerk_ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Smerk_ExampleUITests.m; sourceTree = "<group>"; };
+		52732FE71C0CCCBA00185F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D1A5671C0CCFD800B4AA1F /* SMKDetectionCamera_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMKDetectionCamera_private.h; sourceTree = "<group>"; };
+		52D1A5681C0CCFD800B4AA1F /* SMKDetectionCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMKDetectionCamera.h; sourceTree = "<group>"; };
+		52D1A5691C0CCFD800B4AA1F /* SMKDetectionCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMKDetectionCamera.m; sourceTree = "<group>"; };
+		52D1A56C1C0CCFEB00B4AA1F /* SMKDetectionCamera+BlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMKDetectionCamera+BlockDelegate.h"; sourceTree = "<group>"; };
+		52D1A56D1C0CCFEB00B4AA1F /* SMKDetectionCamera+BlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMKDetectionCamera+BlockDelegate.m"; sourceTree = "<group>"; };
+		52D1A56E1C0CCFEB00B4AA1F /* SMKDetectionCamera+BufferHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMKDetectionCamera+BufferHandler.h"; sourceTree = "<group>"; };
+		52D1A56F1C0CCFEB00B4AA1F /* SMKDetectionCamera+BufferHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMKDetectionCamera+BufferHandler.m"; sourceTree = "<group>"; };
+		52D1A5701C0CCFEB00B4AA1F /* SMKDetectionCamera+MetadataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SMKDetectionCamera+MetadataHandler.h"; sourceTree = "<group>"; };
+		52D1A5711C0CCFEB00B4AA1F /* SMKDetectionCamera+MetadataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SMKDetectionCamera+MetadataHandler.m"; sourceTree = "<group>"; };
+		52D1A5751C0CD03700B4AA1F /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GPUImage.framework; sourceTree = "<group>"; };
+		52D1A5771C0CD07600B4AA1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		52D1A5791C0CD08000B4AA1F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		52D1A57B1C0CD08B00B4AA1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		52D1A57D1C0CD09500B4AA1F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		52D1A57F1C0CD09E00B4AA1F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52732FBA1C0CCCBA00185F70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D1A5801C0CD09E00B4AA1F /* CoreMedia.framework in Frameworks */,
+				52D1A57E1C0CD09500B4AA1F /* CoreVideo.framework in Frameworks */,
+				52D1A57C1C0CD08B00B4AA1F /* OpenGLES.framework in Frameworks */,
+				52D1A57A1C0CD08000B4AA1F /* AVFoundation.framework in Frameworks */,
+				52D1A5781C0CD07600B4AA1F /* QuartzCore.framework in Frameworks */,
+				52D1A5761C0CD03700B4AA1F /* GPUImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52732FD31C0CCCBA00185F70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52732FDE1C0CCCBA00185F70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52732FB41C0CCCBA00185F70 = {
+			isa = PBXGroup;
+			children = (
+				52D1A57F1C0CD09E00B4AA1F /* CoreMedia.framework */,
+				52D1A57D1C0CD09500B4AA1F /* CoreVideo.framework */,
+				52D1A57B1C0CD08B00B4AA1F /* OpenGLES.framework */,
+				52D1A5791C0CD08000B4AA1F /* AVFoundation.framework */,
+				52D1A5771C0CD07600B4AA1F /* QuartzCore.framework */,
+				52D1A5751C0CD03700B4AA1F /* GPUImage.framework */,
+				52732FBF1C0CCCBA00185F70 /* Smerk_Example */,
+				52732FD91C0CCCBA00185F70 /* Smerk_ExampleTests */,
+				52732FE41C0CCCBA00185F70 /* Smerk_ExampleUITests */,
+				52732FBE1C0CCCBA00185F70 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52732FBE1C0CCCBA00185F70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52732FBD1C0CCCBA00185F70 /* Smerk_Example.app */,
+				52732FD61C0CCCBA00185F70 /* Smerk_ExampleTests.xctest */,
+				52732FE11C0CCCBA00185F70 /* Smerk_ExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52732FBF1C0CCCBA00185F70 /* Smerk_Example */ = {
+			isa = PBXGroup;
+			children = (
+				52D1A5661C0CCFB600B4AA1F /* Smerk */,
+				52732FC31C0CCCBA00185F70 /* AppDelegate.h */,
+				52732FC41C0CCCBA00185F70 /* AppDelegate.m */,
+				52732FC61C0CCCBA00185F70 /* ViewController.h */,
+				52732FC71C0CCCBA00185F70 /* ViewController.mm */,
+				52732FC91C0CCCBA00185F70 /* Main.storyboard */,
+				52732FCC1C0CCCBA00185F70 /* Assets.xcassets */,
+				52732FCE1C0CCCBA00185F70 /* LaunchScreen.storyboard */,
+				52732FD11C0CCCBA00185F70 /* Info.plist */,
+				52732FC01C0CCCBA00185F70 /* Supporting Files */,
+			);
+			path = Smerk_Example;
+			sourceTree = "<group>";
+		};
+		52732FC01C0CCCBA00185F70 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				52732FC11C0CCCBA00185F70 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52732FD91C0CCCBA00185F70 /* Smerk_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				52732FDA1C0CCCBA00185F70 /* Smerk_ExampleTests.m */,
+				52732FDC1C0CCCBA00185F70 /* Info.plist */,
+			);
+			path = Smerk_ExampleTests;
+			sourceTree = "<group>";
+		};
+		52732FE41C0CCCBA00185F70 /* Smerk_ExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52732FE51C0CCCBA00185F70 /* Smerk_ExampleUITests.m */,
+				52732FE71C0CCCBA00185F70 /* Info.plist */,
+			);
+			path = Smerk_ExampleUITests;
+			sourceTree = "<group>";
+		};
+		52D1A5661C0CCFB600B4AA1F /* Smerk */ = {
+			isa = PBXGroup;
+			children = (
+				52D1A56B1C0CCFEB00B4AA1F /* Detection Handlers */,
+				52D1A5671C0CCFD800B4AA1F /* SMKDetectionCamera_private.h */,
+				52D1A5681C0CCFD800B4AA1F /* SMKDetectionCamera.h */,
+				52D1A5691C0CCFD800B4AA1F /* SMKDetectionCamera.m */,
+			);
+			name = Smerk;
+			sourceTree = "<group>";
+		};
+		52D1A56B1C0CCFEB00B4AA1F /* Detection Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				52D1A56C1C0CCFEB00B4AA1F /* SMKDetectionCamera+BlockDelegate.h */,
+				52D1A56D1C0CCFEB00B4AA1F /* SMKDetectionCamera+BlockDelegate.m */,
+				52D1A56E1C0CCFEB00B4AA1F /* SMKDetectionCamera+BufferHandler.h */,
+				52D1A56F1C0CCFEB00B4AA1F /* SMKDetectionCamera+BufferHandler.m */,
+				52D1A5701C0CCFEB00B4AA1F /* SMKDetectionCamera+MetadataHandler.h */,
+				52D1A5711C0CCFEB00B4AA1F /* SMKDetectionCamera+MetadataHandler.m */,
+			);
+			path = "Detection Handlers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52732FBC1C0CCCBA00185F70 /* Smerk_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52732FEA1C0CCCBA00185F70 /* Build configuration list for PBXNativeTarget "Smerk_Example" */;
+			buildPhases = (
+				52732FB91C0CCCBA00185F70 /* Sources */,
+				52732FBA1C0CCCBA00185F70 /* Frameworks */,
+				52732FBB1C0CCCBA00185F70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Smerk_Example;
+			productName = Smerk_Example;
+			productReference = 52732FBD1C0CCCBA00185F70 /* Smerk_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52732FD51C0CCCBA00185F70 /* Smerk_ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52732FED1C0CCCBA00185F70 /* Build configuration list for PBXNativeTarget "Smerk_ExampleTests" */;
+			buildPhases = (
+				52732FD21C0CCCBA00185F70 /* Sources */,
+				52732FD31C0CCCBA00185F70 /* Frameworks */,
+				52732FD41C0CCCBA00185F70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52732FD81C0CCCBA00185F70 /* PBXTargetDependency */,
+			);
+			name = Smerk_ExampleTests;
+			productName = Smerk_ExampleTests;
+			productReference = 52732FD61C0CCCBA00185F70 /* Smerk_ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52732FE01C0CCCBA00185F70 /* Smerk_ExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52732FF01C0CCCBA00185F70 /* Build configuration list for PBXNativeTarget "Smerk_ExampleUITests" */;
+			buildPhases = (
+				52732FDD1C0CCCBA00185F70 /* Sources */,
+				52732FDE1C0CCCBA00185F70 /* Frameworks */,
+				52732FDF1C0CCCBA00185F70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52732FE31C0CCCBA00185F70 /* PBXTargetDependency */,
+			);
+			name = Smerk_ExampleUITests;
+			productName = Smerk_ExampleUITests;
+			productReference = 52732FE11C0CCCBA00185F70 /* Smerk_ExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52732FB51C0CCCBA00185F70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = CMU_16432;
+				TargetAttributes = {
+					52732FBC1C0CCCBA00185F70 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = LVFPM8YJVM;
+					};
+					52732FD51C0CCCBA00185F70 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 52732FBC1C0CCCBA00185F70;
+					};
+					52732FE01C0CCCBA00185F70 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 52732FBC1C0CCCBA00185F70;
+					};
+				};
+			};
+			buildConfigurationList = 52732FB81C0CCCBA00185F70 /* Build configuration list for PBXProject "Smerk_Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52732FB41C0CCCBA00185F70;
+			productRefGroup = 52732FBE1C0CCCBA00185F70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52732FBC1C0CCCBA00185F70 /* Smerk_Example */,
+				52732FD51C0CCCBA00185F70 /* Smerk_ExampleTests */,
+				52732FE01C0CCCBA00185F70 /* Smerk_ExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52732FBB1C0CCCBA00185F70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52732FD01C0CCCBA00185F70 /* LaunchScreen.storyboard in Resources */,
+				52732FCD1C0CCCBA00185F70 /* Assets.xcassets in Resources */,
+				52732FCB1C0CCCBA00185F70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52732FD41C0CCCBA00185F70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52732FDF1C0CCCBA00185F70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52732FB91C0CCCBA00185F70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52732FC81C0CCCBA00185F70 /* ViewController.mm in Sources */,
+				52D1A5731C0CCFEB00B4AA1F /* SMKDetectionCamera+BufferHandler.m in Sources */,
+				52732FC51C0CCCBA00185F70 /* AppDelegate.m in Sources */,
+				52D1A56A1C0CCFD800B4AA1F /* SMKDetectionCamera.m in Sources */,
+				52D1A5721C0CCFEB00B4AA1F /* SMKDetectionCamera+BlockDelegate.m in Sources */,
+				52732FC21C0CCCBA00185F70 /* main.m in Sources */,
+				52D1A5741C0CCFEB00B4AA1F /* SMKDetectionCamera+MetadataHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52732FD21C0CCCBA00185F70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52732FDB1C0CCCBA00185F70 /* Smerk_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52732FDD1C0CCCBA00185F70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52732FE61C0CCCBA00185F70 /* Smerk_ExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52732FD81C0CCCBA00185F70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52732FBC1C0CCCBA00185F70 /* Smerk_Example */;
+			targetProxy = 52732FD71C0CCCBA00185F70 /* PBXContainerItemProxy */;
+		};
+		52732FE31C0CCCBA00185F70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52732FBC1C0CCCBA00185F70 /* Smerk_Example */;
+			targetProxy = 52732FE21C0CCCBA00185F70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52732FC91C0CCCBA00185F70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52732FCA1C0CCCBA00185F70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52732FCE1C0CCCBA00185F70 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52732FCF1C0CCCBA00185F70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52732FE81C0CCCBA00185F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52732FE91C0CCCBA00185F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52732FEB1C0CCCBA00185F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LVFPM8YJVM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Smerk_Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CMU-16432.Smerk-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		52732FEC1C0CCCBA00185F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LVFPM8YJVM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Smerk_Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CMU-16432.Smerk-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		52732FEE1C0CCCBA00185F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Smerk_ExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CMU-16432.Smerk-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smerk_Example.app/Smerk_Example";
+			};
+			name = Debug;
+		};
+		52732FEF1C0CCCBA00185F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Smerk_ExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CMU-16432.Smerk-ExampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smerk_Example.app/Smerk_Example";
+			};
+			name = Release;
+		};
+		52732FF11C0CCCBA00185F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Smerk_ExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CMU-16432.Smerk-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Smerk_Example;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		52732FF21C0CCCBA00185F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Smerk_ExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CMU-16432.Smerk-ExampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Smerk_Example;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52732FB81C0CCCBA00185F70 /* Build configuration list for PBXProject "Smerk_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52732FE81C0CCCBA00185F70 /* Debug */,
+				52732FE91C0CCCBA00185F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52732FEA1C0CCCBA00185F70 /* Build configuration list for PBXNativeTarget "Smerk_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52732FEB1C0CCCBA00185F70 /* Debug */,
+				52732FEC1C0CCCBA00185F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52732FED1C0CCCBA00185F70 /* Build configuration list for PBXNativeTarget "Smerk_ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52732FEE1C0CCCBA00185F70 /* Debug */,
+				52732FEF1C0CCCBA00185F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52732FF01C0CCCBA00185F70 /* Build configuration list for PBXNativeTarget "Smerk_ExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52732FF11C0CCCBA00185F70 /* Debug */,
+				52732FF21C0CCCBA00185F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52732FB51C0CCCBA00185F70 /* Project object */;
+}
