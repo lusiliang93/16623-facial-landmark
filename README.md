@@ -32,8 +32,8 @@
      - We have found at least two open sources and each of them has a detailed paper to read. As long as we can understand, it can be finished on time.
      
 - Schedule:
- - Nov.7 - Nov.13  Literature review and find facial landmark open sources 
- - Nov.14 - Nov.16 Basic version of facial landmark in Xcode
+ - Nov.7 - Nov.13  Literature review and find facial landmark open sources(Completed) 
+ - Nov.14 - Nov.16 Basic version of facial landmark in Xcode(Half Completed. We've found a swift version)
  - Nov.17 - Nov. 23 Advanced version with speedup
  - Nov.24 - Dec.1   Add additional function like head pose estimation
  - Dec.2 - Dec. 6 Design a simple UI, speed benchmark and make the demo 
