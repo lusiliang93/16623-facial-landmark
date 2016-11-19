@@ -18,7 +18,7 @@
   So far, we have found at least two open sources to do face alignment. The one is C++ version of the paper, the other is the matlab version of CLM using dlib and OpenCV. Hence, the challenges can be described as follows:
    - Understanding the codes and check if it is feasible to use these open sources to develop an Xcode project;
    - How to modify the original codes so as to be more robust and have better performance(accuracy and speed);
-   - Learn how to use Metal API so as to check if it is feasible to use Metal to get access to the GPU to realize the speedup;(we may not use Metal)
+   - Learn how to use Metal API so as to check if it is feasible to use Metal to get access to the GPU to realize the speedup;
    - Try to realize other functions such as pose estimation depending on the basic version;
    - How to build dlib on iOS;
 
