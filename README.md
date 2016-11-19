@@ -19,7 +19,7 @@
    - Understanding the codes and check if it is feasible to use these open sources to develop an Xcode project;
    - How to modify the original codes so as to be more robust and have better performance(accuracy and speed);
    - Learn how to use Metal API so as to check if it is feasible to use Metal to get access to the GPU to realize the speedup;
-   - Try to realize other functions such as pose estimation depending on the basic version;
+   - Try to realize other functions such as pose estimation depending on the basic version;
    - How to build dlib on iOS;
 
 - Goals and Deliverables
