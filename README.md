@@ -7,7 +7,7 @@
   Based on the paper named Face Alignment at 3000 FPS via Regressing Local Binary Features, the paper itself proposed a new approach which regularizes learning with a “locality” principle. In detail, since the local binary features are tree based and highly sparse, the process of extracting and regressing such features are extremely rapid[1,2]. It is reported in the paper that the proposed face alignment system can achieve 300 fps on a mobile phone for locating a few dozens of landmarks. 
   In addition, according to the proposed regularizations in the paper, since each local feature mapping function is independent, we can make the use of SIMD operations of Accelerate Framework. In addition, Metal provides the lowest-overhead access to the GPU, enabling us to maximize the graphics and compute potential of your apps on iOS[3]. Hence, we will use these two frameworks to maximize the speedup as much as possible.
   Besides this approach, an efficient facial landmark open source named OpenFace [4] has been successfully implemented into many projects.OpenFace is an open source facial behavior analysis toolkit, which is able to perform a number of facial analysis tasks like facial landmark detection and head pose tracking. Its facial landmark tracking is based on constrained local neural fields（CLNF）method[5],which is a novel landmark detection model based on constrained local model(CLM). CLM learns a set of local experts and constrains them using shape models. Similarly, once we develop the basic version of facial landmark tracking, we will speed up the application using Accelerate Framework and Metal API. 
-  After looking for the opensource, we've found a swift version of facial landmark tracking (thanks to ) which is based on dlib.The facial landmark model used in dlib is based on the paper named "One Millisecond Face Alignment with an Ensemble of Regression Trees". This paper utilized a cascade of tree-like regressors to estimate the face’s landmark positions.
+  After looking for the opensource, we've found a swift version of facial landmark tracking (thanks to ) which is based on dlib.The facial landmark model used in dlib is based on the paper named "One Millisecond Face Alignment with an Ensemble of Regression Trees"[7]. This paper utilized a cascade of tree-like regressors to estimate the face’s landmark positions.
   
 - Challenges
 
@@ -56,4 +56,6 @@
   [5] “Constrained Local Neural Fields for robust facial landmark detection in the wild” Tadas Baltrušaitis, Peter Robinson, and Louis-Philippe Morency. in IEEE Int. Conference on Computer Vision Workshops, 300 Faces in-the-Wild Challenge, 2013.
   
   [6] https://github.com/luoyetx/deep-landmark
+  
+  [7] Kazemi, Vahid, and Josephine Sullivan. "One millisecond face alignment with an ensemble of regression trees." In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1867-1874. 2014.
 
