@@ -4,9 +4,13 @@
 - Background
 
   Facial landmark is an application of facial analysis in computer vision. It involves locating the face in an image and marking the accurate position of different facial features. It is also referred to as “face alignment” or “facial keypoint detection”. It has many interesting and potential applications such as face morphing, head pose estimation and virtual makeover.
+  
   Based on the paper named Face Alignment at 3000 FPS via Regressing Local Binary Features, the paper itself proposed a new approach which regularizes learning with a “locality” principle. In detail, since the local binary features are tree based and highly sparse, the process of extracting and regressing such features are extremely rapid[1,2]. It is reported in the paper that the proposed face alignment system can achieve 300 fps on a mobile phone for locating a few dozens of landmarks. 
+  
   In addition, according to the proposed regularizations in the paper, since each local feature mapping function is independent, we can make the use of SIMD operations of Accelerate Framework. In addition, Metal provides the lowest-overhead access to the GPU, enabling us to maximize the graphics and compute potential of your apps on iOS[3]. Hence, we will use these two frameworks to maximize the speedup as much as possible.
+  
   Besides this approach, an efficient facial landmark open source named OpenFace [4] has been successfully implemented into many projects.OpenFace is an open source facial behavior analysis toolkit, which is able to perform a number of facial analysis tasks like facial landmark detection and head pose tracking. Its facial landmark tracking is based on constrained local neural fields（CLNF）method[5],which is a novel landmark detection model based on constrained local model(CLM). CLM learns a set of local experts and constrains them using shape models. Similarly, once we develop the basic version of facial landmark tracking, we will speed up the application using Accelerate Framework and Metal API. 
+  
   After looking for the opensource, we've found a swift version of facial landmark tracking (thanks to ) which is based on dlib.The facial landmark model used in dlib is based on the paper named "One Millisecond Face Alignment with an Ensemble of Regression Trees"[7]. This paper utilized a cascade of tree-like regressors to estimate the face’s landmark positions.
   
 - Challenges
@@ -15,12 +19,13 @@
    - Understanding the codes and check if it is feasible to use these open sources to develop an Xcode project;
    - How to modify the original codes so as to be more robust and have better performance(accuracy and speed);
    - Learn how to use Metal API so as to check if it is feasible to use Metal to get access to the GPU to realize the speedup;(we may not use Metal)
-   - Try to realize other functions such as pose estimation depending on the basic version.
+   - Try to realize other functions such as pose estimation depending on the basic version;
+   - How to build dlib on iOS;
 
 - Goals and Deliverables
   - Goals:
      - We must successfully develop a facial landmark iOS app
-     - We have to speed up the basic version at least 5 times using Accelerate Framework
+     - We have to speed up the basic version at least 5 times using Accelerate Framework and GPUImage
   - Extra goals:
      - We would try to learn Metal API and get much faster version 
      - We would add additional function like head pose estimation
@@ -36,7 +41,7 @@
  - Nov.7 - Nov.13  Literature review and find facial landmark open sources(Completed) 
  - Nov.14 - Nov.16 Basic version of facial landmark in Xcode(Half Completed. We've found a swift version)
  - Nov.17 - Nov.20 Study the basic code and be familiar with the face landmarking model in dlib library. In addition, learn how to build Dlib in iOS if we want to change something in Dlib.
- - Nov.21 - Nov.23 Convert swift into objective-C. Measure fps and develop an accelerated version by optimizing the cache design. 
+ - Nov.21 - Nov.23 Convert swift into objective-C. Measure fps and develop an accelerated version by optimizing the dlibwrapper.mm. 
  - Nov.24 - Dec.27 Try to improve the performance of the output. For instance, when testers rotate the camera within a certain degree range, the face can still be tracked well with multiple landmarks.
  - Nov.28 - Dec.1 Add additional function like real-time head tracking by incorporating Smerk into the project. 
  - Dec.2 - Dec.4 Create a simple UI. Benchmark speedup. 
