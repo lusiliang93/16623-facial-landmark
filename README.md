@@ -11,7 +11,7 @@
   
   Besides this approach, an efficient facial landmark open source named OpenFace [4] has been successfully implemented into many projects.OpenFace is an open source facial behavior analysis toolkit, which is able to perform a number of facial analysis tasks like facial landmark detection and head pose tracking. Its facial landmark tracking is based on constrained local neural fields（CLNF）method[5],which is a novel landmark detection model based on constrained local model(CLM). CLM learns a set of local experts and constrains them using shape models. Similarly, once we develop the basic version of facial landmark tracking, we will speed up the application using Accelerate Framework and Metal API. 
   
-  After looking for the opensource, we've found a swift version of facial landmark tracking (thanks to ) which is based on dlib.The facial landmark model used in dlib is based on the paper named "One Millisecond Face Alignment with an Ensemble of Regression Trees"[7]. This paper utilized a cascade of tree-like regressors to estimate the face’s landmark positions.
+  After looking for the opensource, we've found a swift version of facial landmark tracking (thanks to zweigraf[8]) which is based on dlib.The facial landmark model used in dlib is based on the paper named "One Millisecond Face Alignment with an Ensemble of Regression Trees"[7]. This paper utilized a cascade of tree-like regressors to estimate the face’s landmark positions.
   
 - Challenges
 
@@ -63,4 +63,6 @@
   [6] https://github.com/luoyetx/deep-landmark
   
   [7] Kazemi, Vahid, and Josephine Sullivan. "One millisecond face alignment with an ensemble of regression trees." In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pp. 1867-1874. 2014.
+  
+  [8] https://github.com/zweigraf/face-landmarking-ios
 
