@@ -1,6 +1,6 @@
 # 16623-facial-landmark(Siliang Lu & Ningyan Zhu)
 - Summary
-      - Our project aims to design a fast facial landmark/ face alignment application in iOS devices. The application will use learning-based approach. We will use Accelerate Framework to make use of SIMD operations and might use Metal API to get access to the GPU.
+      - Our project aims to design a real-time facial landmark/ face alignment application in iOS devices. The application will use the open source of dlib. We will use multithreading to parallelize in order to speed up.
 - Background
 
   Facial landmark is an application of facial analysis in computer vision. It involves locating the face in an image and marking the accurate position of different facial features. It is also referred to as “face alignment” or “facial keypoint detection”. It has many interesting and potential applications such as face morphing, head pose estimation and virtual makeover.
@@ -41,7 +41,7 @@
  - Nov.7 - Nov.13  Literature review and find facial landmark open sources(Completed) 
  - Nov.14 - Nov.16 Basic version of facial landmark in Xcode(Half Completed. We've found a swift version)
  - Nov.17 - Nov.20 Study the basic code and be familiar with the face landmarking model in dlib library. In addition, learn how to build Dlib in iOS if we want to change something in Dlib.
- - Nov.21 - Nov.23 Convert swift into objective-C. Measure fps and develop an accelerated version by optimizing the dlibwrapper.mm. 
+ - Nov.21 - Nov.23 Measure fps and develop an accelerated version by optimizing the dlibwrapper.mm. 
  - Nov.24 - Dec.27 Try to improve the performance of the output. For instance, when testers rotate the camera within a certain degree range, the face can still be tracked well with multiple landmarks.
  - Nov.28 - Dec.1 Add additional function like real-time head tracking by incorporating Smerk into the project. 
  - Dec.2 - Dec.4 Create a simple UI. Benchmark speedup. 
