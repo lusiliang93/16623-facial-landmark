@@ -23,4 +23,5 @@ Thanks to Satya Mallick from [learnopencv.com](http://www.learnopencv.com). He r
 ## License
 
 Code (except for ```DisplayLiveSamples/lib/*```) is released under MIT license.
+
 Code ("configurecamera") is created based on Apple Developer Documentation and adapted by us.
