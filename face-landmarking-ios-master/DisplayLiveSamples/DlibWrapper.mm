@@ -34,6 +34,7 @@
 
 - (void)prepare {
     NSString *modelFileName = [[NSBundle mainBundle] pathForResource:@"shape_predictor_68_face_landmarks" ofType:@"dat"];
+    //NSString *modelFileName = [[NSBundle mainBundle] pathForResource:@"sp" ofType:@"dat"];
     std::string modelFileNameCString = [modelFileName UTF8String];
     
     dlib::deserialize(modelFileNameCString) >> sp;
@@ -42,6 +43,7 @@
     self.prepared = YES;
 }
 
+//Can we do without buffer??
 - (void)doWorkOnSampleBuffer:(CMSampleBufferRef)sampleBuffer inRects:(NSArray<NSValue *> *)rects {
     
     if (!self.prepared) {

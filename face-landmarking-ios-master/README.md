@@ -1,11 +1,10 @@
-# Face Landmarking on iPhone
+# Face Landmarking on iOS device
 
 This prototype shows basic face landmark recognition on a ```CMSampleBuffer``` (see ```DlibWrapper.mm```) coming out of an ```AVCaptureSession```.
 
-Frame rate is actually quite good on an iPhone 6S now that we are using the system face detection via ```AVCaptureMetadataOutput```.
-I did not measure performance yet but there is no discernible lag anymore. It looks like 30fps. 
+Through Profiling->Animation, frame rate is actually around 30 fps since we are using the system face detection via ```AVCaptureMetadataOutput```.
 
-But I am sure there are a lot more performance improvements to be made. Currently, the buffers are copied around a lot.
+The maximum frame rate available for current device can be 60 fps. However, under the fastest setting, the landmark tracking fails. We are trying to investigate on that.
 
 ## Screenshot
 
@@ -24,3 +23,4 @@ Thanks to Satya Mallick from [learnopencv.com](http://www.learnopencv.com). He r
 ## License
 
 Code (except for ```DisplayLiveSamples/lib/*```) is released under MIT license.
+Code ("configurecamera") is created based on Apple Developer Documentation and adapted by us.

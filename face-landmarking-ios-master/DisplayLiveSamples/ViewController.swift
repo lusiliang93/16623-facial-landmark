@@ -31,13 +31,25 @@ class ViewController: UIViewController {
         
 
         let layer = sessionHandler.layer
+        //flip up-and-down because position turns into back edit
+        //self.view.layer.setAffineTransform(CGAffineTransform(scaleX: 1, y: -1))
         layer.frame = preview.bounds
+        //set the layer filled with the entire screen
+        layer.videoGravity = AVLayerVideoGravityResizeAspectFill
 
         preview.layer.addSublayer(layer)
         
         view.layoutIfNeeded()
 
     }
+    
+    //    var lastUpdateTime: TimeInterval = 0
+    //    func update(currentTime:TimeInterval){
+    //        let delta = currentTime - lastUpdateTime
+    //        let currentFPS = 1/delta
+    //        print("currentFPS\(currentFPS).")
+    //        lastUpdateTime = currentTime
+    //    }
 
 }
 

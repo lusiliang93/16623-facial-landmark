@@ -19,6 +19,8 @@
 		A5A1B2D41CEA35B300626AC5 /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A1B2D31CEA35B300626AC5 /* libdlib.a */; };
 		A5A1B2D61CEA41E200626AC5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A1B2D51CEA41E200626AC5 /* Accelerate.framework */; };
 		A5A1B2D81CEA431600626AC5 /* shape_predictor_68_face_landmarks.dat in Resources */ = {isa = PBXBuildFile; fileRef = A5A1B2D71CEA431600626AC5 /* shape_predictor_68_face_landmarks.dat */; };
+		BC3D73191DEBA6F3004FFA52 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3D73181DEBA6F3004FFA52 /* CoreImage.framework */; };
+		BC3D731B1DEBA6FC004FFA52 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3D731A1DEBA6FC004FFA52 /* OpenGLES.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		A5A1B2D31CEA35B300626AC5 /* libdlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdlib.a; path = DisplayLiveSamples/lib/libdlib.a; sourceTree = "<group>"; };
 		A5A1B2D51CEA41E200626AC5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		A5A1B2D71CEA431600626AC5 /* shape_predictor_68_face_landmarks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = shape_predictor_68_face_landmarks.dat; path = DisplayLiveSamples/lib/shape_predictor_68_face_landmarks.dat; sourceTree = "<group>"; };
+		BC3D73181DEBA6F3004FFA52 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		BC3D731A1DEBA6FC004FFA52 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		BC949CE81DE2ABFB00FFA299 /* sp.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = sp.dat; path = DisplayLiveSamples/lib/sp.dat; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3D731B1DEBA6FC004FFA52 /* OpenGLES.framework in Frameworks */,
+				BC3D73191DEBA6F3004FFA52 /* CoreImage.framework in Frameworks */,
 				A5A1B2D61CEA41E200626AC5 /* Accelerate.framework in Frameworks */,
 				A5A1B2D41CEA35B300626AC5 /* libdlib.a in Frameworks */,
 			);
@@ -91,6 +98,7 @@
 		A56695E31CE8B34B00BD7EAF = {
 			isa = PBXGroup;
 			children = (
+				BC949CE81DE2ABFB00FFA299 /* sp.dat */,
 				A5A1B2D71CEA431600626AC5 /* shape_predictor_68_face_landmarks.dat */,
 				A5A1B2D51CEA41E200626AC5 /* Accelerate.framework */,
 				A5A1B2D31CEA35B300626AC5 /* libdlib.a */,
@@ -98,6 +106,7 @@
 				A56696031CE8B34B00BD7EAF /* DisplayLiveSamplesTests */,
 				A566960E1CE8B34B00BD7EAF /* DisplayLiveSamplesUITests */,
 				A56695ED1CE8B34B00BD7EAF /* Products */,
+				BC3D73171DEBA6F2004FFA52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +153,15 @@
 				A56696111CE8B34B00BD7EAF /* Info.plist */,
 			);
 			path = DisplayLiveSamplesUITests;
+			sourceTree = "<group>";
+		};
+		BC3D73171DEBA6F2004FFA52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC3D731A1DEBA6FC004FFA52 /* OpenGLES.framework */,
+				BC3D73181DEBA6F3004FFA52 /* CoreImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

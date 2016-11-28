@@ -11,7 +11,9 @@ import AVFoundation
 class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureMetadataOutputObjectsDelegate {
     var session = AVCaptureSession()
     let layer = AVSampleBufferDisplayLayer()
+    //multithreading
     let sampleQueue = DispatchQueue(label: "com.zweigraf.DisplayLiveSamples.sampleQueue", attributes: [])
+    //multithreading
     let faceQueue = DispatchQueue(label: "com.zweigraf.DisplayLiveSamples.faceQueue", attributes: [])
     let wrapper = DlibWrapper()
     
@@ -25,8 +27,11 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
     func openSession() {
         let device = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
             .map { $0 as! AVCaptureDevice }
-            .filter { $0.position == .front}
+            .filter { $0.position == .front} //It is said back can be faster edit to back
             .first!
+        
+        //Always try BestFrameRate edit
+        configureCamera(forHighestFrameRate: device)
         
         let input = try! AVCaptureDeviceInput(device: device)
         
@@ -38,9 +43,12 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
     
         session.beginConfiguration()
         
+        // The receiver's activeVideoMinFrameDuration resets to its default value since input is added to the session
         if session.canAddInput(input) {
             session.addInput(input)
         }
+        //Therefore, we need to lock the configuration again edit 
+        //configureCamera(forHighestFrameRate: device)
         if session.canAddOutput(output) {
             session.addOutput(output)
         }
@@ -87,5 +95,30 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         currentMetadata = metadataObjects as [AnyObject]
+    }
+    
+    // Always try best frame rate edit
+    func configureCamera(forHighestFrameRate device: AVCaptureDevice!){
+        var bestFormat: AVCaptureDeviceFormat? = device.activeFormat
+        var bestFrameRateRange: AVFrameRateRange? = device.activeFormat.videoSupportedFrameRateRanges[0] as? AVFrameRateRange
+        let formats:[AVCaptureDeviceFormat]=device.formats as! [AVCaptureDeviceFormat]
+        for format: AVCaptureDeviceFormat in formats {
+            let ranges:[AVFrameRateRange]=format.videoSupportedFrameRateRanges as! [AVFrameRateRange]
+            for range: AVFrameRateRange in ranges{
+                if range.maxFrameRate > bestFrameRateRange!.maxFrameRate {
+                    bestFormat = format
+                    bestFrameRateRange = range
+                }
+            }
+        }
+        if bestFormat != nil {
+            try!device.lockForConfiguration();
+            device.activeFormat = bestFormat
+            //the minimumtime interval between which the receiver should output consecutive frames
+            device.activeVideoMinFrameDuration = bestFrameRateRange!.minFrameDuration
+            device.activeVideoMaxFrameDuration = bestFrameRateRange!.minFrameDuration
+            device.unlockForConfiguration()
+        }
+        print("The highest frame rate:\(bestFrameRateRange?.maxFrameRate) fps.")
     }
 }

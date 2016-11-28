@@ -51,6 +51,7 @@
                withDetectionBlock:^(SMKDetectionOptions detectionType, NSArray *detectedObjects, CGRect clapOrRectZero) {
                    // Check if the kFaceFeatures have been discovered
                    if (detectionType & kFaceFeatures) {
+                       //No buffer??
                        [self updateFaceFeatureTrackingViewWithObjects:detectedObjects];
                    }
                }];
@@ -79,7 +80,7 @@
         faceFeatureTrackingView_.hidden = YES;
     }
     else {
-        CIFaceFeature * feature = objects[0];
+        CIFaceFeature * feature = objects[0]; //??
         CGRect face = feature.bounds;
         
         face = CGRectApplyAffineTransform(face, portraitRotationTransform_);
