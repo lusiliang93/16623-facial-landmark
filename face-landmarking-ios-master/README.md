@@ -4,7 +4,7 @@ This prototype shows basic face landmark recognition on a ```CMSampleBuffer``` (
 
 Through Profiling->Animation, frame rate is actually around 30 fps since we are using the system face detection via ```AVCaptureMetadataOutput```.
 
-The maximum frame rate available for current device can be 60 fps. However, under the fastest setting, the landmark tracking fails. We are trying to investigate on that.
+The maximum frame rate available for current device can be 60 fps. However, when the core part of facial landmark is running, frame rate can only be 9-10 fps, which means that we may need to modify the implementation of facial landmark in DlibWrapper.mm to speed up.
 
 ## Screenshot
 
