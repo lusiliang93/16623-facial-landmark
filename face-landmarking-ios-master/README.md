@@ -20,6 +20,8 @@ The project to build Dlib on iOS was generated according to [these](http://stack
 
 Thanks to Satya Mallick from [learnopencv.com](http://www.learnopencv.com). He recommended using the system face detector to me.
 
+To many thanks to RASS. Check out his(her) instructions on how to generate new [libdlib.a](https://github.com/RedHandTech/Object_Detector) !!!
+
 ## License
 
 Code (except for ```DisplayLiveSamples/lib/*```) is released under MIT license.
