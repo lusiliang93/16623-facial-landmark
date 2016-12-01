@@ -16,11 +16,11 @@
 		A56696101CE8B34B00BD7EAF /* DisplayLiveSamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566960F1CE8B34B00BD7EAF /* DisplayLiveSamplesUITests.swift */; };
 		A566961E1CE8B4A100BD7EAF /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566961D1CE8B4A100BD7EAF /* SessionHandler.swift */; };
 		A5A1B2D21CEA317B00626AC5 /* DlibWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5A1B2D11CEA317B00626AC5 /* DlibWrapper.mm */; };
-		A5A1B2D41CEA35B300626AC5 /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A1B2D31CEA35B300626AC5 /* libdlib.a */; };
 		A5A1B2D61CEA41E200626AC5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A1B2D51CEA41E200626AC5 /* Accelerate.framework */; };
 		A5A1B2D81CEA431600626AC5 /* shape_predictor_68_face_landmarks.dat in Resources */ = {isa = PBXBuildFile; fileRef = A5A1B2D71CEA431600626AC5 /* shape_predictor_68_face_landmarks.dat */; };
 		BC3D73191DEBA6F3004FFA52 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3D73181DEBA6F3004FFA52 /* CoreImage.framework */; };
 		BC3D731B1DEBA6FC004FFA52 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3D731A1DEBA6FC004FFA52 /* OpenGLES.framework */; };
+		BCFF124A1DEF81D900C9D39D /* libdlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCFF12491DEF81D900C9D39D /* libdlib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +58,12 @@
 		A5A1B2CF1CEA317B00626AC5 /* DisplayLiveSamples-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DisplayLiveSamples-Bridging-Header.h"; sourceTree = "<group>"; };
 		A5A1B2D01CEA317B00626AC5 /* DlibWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DlibWrapper.h; sourceTree = "<group>"; };
 		A5A1B2D11CEA317B00626AC5 /* DlibWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DlibWrapper.mm; sourceTree = "<group>"; };
-		A5A1B2D31CEA35B300626AC5 /* libdlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdlib.a; path = DisplayLiveSamples/lib/libdlib.a; sourceTree = "<group>"; };
 		A5A1B2D51CEA41E200626AC5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		A5A1B2D71CEA431600626AC5 /* shape_predictor_68_face_landmarks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = shape_predictor_68_face_landmarks.dat; path = DisplayLiveSamples/lib/shape_predictor_68_face_landmarks.dat; sourceTree = "<group>"; };
 		BC3D73181DEBA6F3004FFA52 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		BC3D731A1DEBA6FC004FFA52 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BC949CE81DE2ABFB00FFA299 /* sp.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = sp.dat; path = DisplayLiveSamples/lib/sp.dat; sourceTree = "<group>"; };
+		BCFF12491DEF81D900C9D39D /* libdlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdlib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +73,8 @@
 			files = (
 				BC3D731B1DEBA6FC004FFA52 /* OpenGLES.framework in Frameworks */,
 				BC3D73191DEBA6F3004FFA52 /* CoreImage.framework in Frameworks */,
+				BCFF124A1DEF81D900C9D39D /* libdlib.a in Frameworks */,
 				A5A1B2D61CEA41E200626AC5 /* Accelerate.framework in Frameworks */,
-				A5A1B2D41CEA35B300626AC5 /* libdlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			children = (
 				BC949CE81DE2ABFB00FFA299 /* sp.dat */,
 				A5A1B2D71CEA431600626AC5 /* shape_predictor_68_face_landmarks.dat */,
+				BCFF12491DEF81D900C9D39D /* libdlib.a */,
 				A5A1B2D51CEA41E200626AC5 /* Accelerate.framework */,
-				A5A1B2D31CEA35B300626AC5 /* libdlib.a */,
 				A56695EE1CE8B34B00BD7EAF /* DisplayLiveSamples */,
 				A56696031CE8B34B00BD7EAF /* DisplayLiveSamplesTests */,
 				A566960E1CE8B34B00BD7EAF /* DisplayLiveSamplesUITests */,
@@ -449,12 +449,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LVFPM8YJVM;
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DLIB_JPEG_SUPPORT,
 					DLIB_NO_GUI_SUPPORT,
 					NDEBUG,
 					DLIB_USE_BLAS,
 					DLIB_USE_LAPACK,
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\" '",
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/DisplayLiveSamples/lib";
 				INFOPLIST_FILE = DisplayLiveSamples/Info.plist;
@@ -463,7 +466,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DisplayLiveSamples/lib",
+					"$(PROJECT_DIR)",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zweigraf.DisplayLiveSamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DisplayLiveSamples/DisplayLiveSamples-Bridging-Header.h";
@@ -478,12 +483,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LVFPM8YJVM;
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DLIB_JPEG_SUPPORT,
 					DLIB_NO_GUI_SUPPORT,
 					NDEBUG,
 					DLIB_USE_BLAS,
 					DLIB_USE_LAPACK,
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\" '",
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/DisplayLiveSamples/lib";
 				INFOPLIST_FILE = DisplayLiveSamples/Info.plist;
@@ -492,7 +500,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DisplayLiveSamples/lib",
+					"$(PROJECT_DIR)",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zweigraf.DisplayLiveSamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DisplayLiveSamples/DisplayLiveSamples-Bridging-Header.h";

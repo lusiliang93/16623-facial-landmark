@@ -94,6 +94,9 @@
     {
         dlib::rectangle oneFaceRect = convertedRectangles[j];
         
+        //draw the detected face with rectangle
+        draw_rectangle(img,oneFaceRect,dlib::rgb_pixel(255,0,255));
+        
         // detect all landmarks
         dlib::full_object_detection shape = sp(img, oneFaceRect);
         

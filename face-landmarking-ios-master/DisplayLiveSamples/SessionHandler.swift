@@ -29,9 +29,7 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
             .map { $0 as! AVCaptureDevice }
             .filter { $0.position == .front} //It is said back can be faster edit to back
             .first!
-        
-        //Always try BestFrameRate edit
-        configureCamera(forHighestFrameRate: device)
+        //session.sessionPreset=AVCaptureSessionPresetiFrame1280x720;
         
         let input = try! AVCaptureDeviceInput(device: device)
         
@@ -47,8 +45,11 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
         if session.canAddInput(input) {
             session.addInput(input)
         }
-        //Therefore, we need to lock the configuration again edit 
+        
+        //Therefore, we need to lock the configuration again
+        //however, if configureCamera is called here, tracking fails
         //configureCamera(forHighestFrameRate: device)
+        
         if session.canAddOutput(output) {
             session.addOutput(output)
         }
@@ -66,6 +67,10 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
         metaOutput.metadataObjectTypes = [AVMetadataObjectTypeFace]
         
         wrapper?.prepare()
+        
+        //Always try BestFrameRate
+        //If configureCamera is called here, tracking succeeds.
+        configureCamera(forHighestFrameRate: device)
         
         session.startRunning()
     }
@@ -97,7 +102,7 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
         currentMetadata = metadataObjects as [AnyObject]
     }
     
-    // Always try best frame rate edit
+    // Always try best frame rate
     func configureCamera(forHighestFrameRate device: AVCaptureDevice!){
         var bestFormat: AVCaptureDeviceFormat? = device.activeFormat
         var bestFrameRateRange: AVFrameRateRange? = device.activeFormat.videoSupportedFrameRateRanges[0] as? AVFrameRateRange
