@@ -2,7 +2,7 @@
 This version of app is capable of detecting smile in the face. A point is drawn to the left eye of the detected face and it would turn pink if the person is smiling or blue when the person is not smiling. It is based on the basic version of facial-landmark master.
 ## Screenshot
 
-![screenshot](WechaIMG2.jpeg)
+![screenshot](WechatIMG2.jpeg)
 
 ## Credits
 
