@@ -104,7 +104,19 @@
         for (unsigned long k = 0; k < shape.num_parts(); k++) {
             dlib::point p = shape.part(k);
             draw_solid_circle(img, p, 3, dlib::rgb_pixel(0, 255, 255));
+            dlib::point p_ = dlib::vector<double,2>((shape.part(37).x()+shape.part(40).x())/2,
+                                                    (shape.part(37).y()+shape.part(40).y())/2);
+            
+            // simple emotion detection based on the points coordinates
+            if(((shape.part(48).y()+shape.part(54).y())/2 - shape.part(66).y()<-2)){
+                draw_solid_circle(img, p_, 3, dlib::rgb_pixel(255, 0, 255));
+            }
+            else{
+                draw_solid_circle(img, p_, 3, dlib::rgb_pixel(0, 255, 255));
+            }
         }
+        
+        
     }
     
     // lets put everything back where it belongs
