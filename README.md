@@ -39,13 +39,13 @@
      
 - Schedule:
  - Nov.7 - Nov.13  Literature review and find facial landmark open sources(Completed) 
- - Nov.14 - Nov.16 Basic version of facial landmark in Xcode(Half Completed. We've found a swift version)
- - Nov.17 - Nov.20 Study the basic code and be familiar with the face landmarking model in dlib library. In addition, learn how to build Dlib in iOS if we want to change something in Dlib.
- - Nov.21 - Nov.23 Measure fps and develop an accelerated version by optimizing the dlibwrapper.mm. 
- - Nov.24 - Dec.27 Try to improve the performance of the output. For instance, when testers rotate the camera within a certain degree range, the face can still be tracked well with multiple landmarks.
- - Nov.28 - Dec.1 Add additional function like real-time head tracking by incorporating Smerk into the project. 
- - Dec.2 - Dec.4 Create a simple UI. Benchmark speedup. 
- - Dec.5 - Dec.7 Make a demo and prepare for the presentation
+ - Nov.14 - Nov.16 Basic version of facial landmark in Xcode (Completed. We've found a swift version)
+ - Nov.17 - Nov.20 Study the basic code and be familiar with the face landmarking model in dlib library. In addition, learn how to build Dlib in iOS if we want to change something in Dlib. (Completed. We've figured out how to rebuil dlib and link it with Xcode)
+ - Nov.21 - Nov.23 Measure fps and develop an accelerated version by optimizing the dlibwrapper.mm. (Completed.We've used CoreAnimation in Profile and use attributes of AVCaptureDevice object to maximize the frame rate)
+ - Nov.24 - Dec.27 Try to improve the performance of the output. For instance, when testers rotate the camera within a certain degree range, the face can still be tracked well with multiple landmarks. (Part Completed.)
+ - Nov.28 - Dec.1 Add additional function like real-time head tracking by incorporating Smerk into the project. (Completed. Instead of Smerk, we've used functions in the class of AVMetadataface object)
+ - Dec.2 - Dec.4 Create a simple UI. Benchmark speedup. (Half Completed. We've finished speed benchmark. But we do not have UI)
+ - Dec.5 - Dec.7 Make a demo and prepare for the presentation (Completed)
  - Dec.8 - Dec. 11 Write final report
 
 - References:
