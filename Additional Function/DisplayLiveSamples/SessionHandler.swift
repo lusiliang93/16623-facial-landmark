@@ -73,45 +73,47 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
                 .flatMap { $0 as? AVMetadataFaceObject }
                 .map { (faceObject) -> NSValue in
                     let convertedObject = captureOutput.transformedMetadataObjectForMetadataObject(faceObject, connection: connection)
-                    //var Yaw=NSValue(CGRect: convertedObject.)
                     return NSValue(CGRect: convertedObject.bounds)
             }
-            //speed estimate
+//            //speed estimate
 //            let durationtime = currentMetadata
 //                .flatMap { $0 as? AVMetadataFaceObject }
 //                .map { (faceObject) -> NSValue in
 //                    let convertedObject = captureOutput.transformedMetadataObjectForMetadataObject(faceObject, connection: connection)
 //                    return NSValue(CMTime: convertedObject.duration)
-            }
+//            }
             
             
 // Pose Estimation
-//            let YawAngle = currentMetadata
-//                .flatMap { $0 as? AVMetadataFaceObject }
-//                .map { (faceObject) -> NSValue in
-//                    return NSValue(nonretainedObject: faceObject.yawAngle)
-//            }
-//             print("YawAngle =", YawAngle)
+            let YawAngle = currentMetadata
+                .flatMap { $0 as? AVMetadataFaceObject }
+                .map { (faceObject) -> CGFloat in
+                    return faceObject.yawAngle
+            }
+             print("YawAngle =", YawAngle)
             
             let RollAngle = currentMetadata
                 .flatMap { $0 as? AVMetadataFaceObject }
-                .map { (faceObject) -> NSValue in
-                    return NSValue(nonretainedObject: faceObject.rollAngle)
+                .map { (faceObject) -> CGFloat in
+                    return faceObject.rollAngle
             }
+            
+            
             print("RollAngle = \(RollAngle)")
+            
             
             
             wrapper.doWorkOnSampleBuffer(sampleBuffer, inRects: boundsArray)
             
             
-            //print(durationtime)//speed estimate
+//            print(durationtime)//speed estimate
         }
 
         layer.enqueueSampleBuffer(sampleBuffer)
     }
     
     func captureOutput(captureOutput: AVCaptureOutput!, didDropSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
-        print("DidDropSampleBuffer")
+        //print("DidDropSampleBuffer")
     }
     
     // MARK: AVCaptureMetadataOutputObjectsDelegate
@@ -119,5 +121,5 @@ class SessionHandler : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, A
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         currentMetadata = metadataObjects
     }
-
+}
 

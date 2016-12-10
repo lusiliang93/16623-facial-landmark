@@ -1,8 +1,15 @@
-# Face Landmarking on iPhone with additional function(smile detection)
-This version of app is capable of detecting smile in the face. A point is drawn to the left eye of the detected face and it would turn pink if the person is smiling or blue when the person is not smiling. It is based on the basic version of facial-landmark master.
+# Face Landmarking on iPhone
+
+This prototype shows basic face landmark recognition on a ```CMSampleBuffer``` (see ```DlibWrapper.mm```) coming out of an ```AVCaptureSession```.
+
+Frame rate is actually quite good on an iPhone 6S now that we are using the system face detection via ```AVCaptureMetadataOutput```.
+I did not measure performance yet but there is no discernible lag anymore. It looks like 30fps. 
+
+But I am sure there are a lot more performance improvements to be made. Currently, the buffers are copied around a lot.
+
 ## Screenshot
 
-![screenshot](WechatIMG2.jpeg)
+![screenshot](screenshot.png)
 
 ## Credits
 

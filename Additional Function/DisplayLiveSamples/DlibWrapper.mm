@@ -4,7 +4,7 @@
 //
 //  Created by Luis Reisewitz on 16.05.16.
 //  Copyright © 2016 ZweiGraf. All rights reserved.
-//
+//  hello
 
 #import "DlibWrapper.h"
 #import <UIKit/UIKit.h>
@@ -108,16 +108,20 @@
 //            dlib::point p_ = shape.part(66);
 //            draw_solid_circle(img, p_, 3, dlib::rgb_pixel(0, 0, 255));
            
-            dlib::point p_ = dlib::vector<double,2>((shape.part(37).x()+shape.part(40).x())/2,
+            dlib::point p_1 = dlib::vector<double,2>((shape.part(37).x()+shape.part(40).x())/2,
                               (shape.part(37).y()+shape.part(40).y())/2);
+            dlib::point p_2 = dlib::vector<double,2>((shape.part(46).x()+shape.part(43).x())/2,
+                                                     (shape.part(46).y()+shape.part(43).y())/2);
 //            draw_solid_circle(img, p_, 3, dlib::rgb_pixel(255, 0, 255));
             
             // simple emotion detection based on the points coordinates
             if(((shape.part(48).y()+shape.part(54).y())/2 - shape.part(66).y()<-2)){
-                draw_solid_circle(img, p_, 3, dlib::rgb_pixel(255, 0, 255));
+                draw_solid_circle(img, p_1, 5, dlib::rgb_pixel(255, 0, 255));
+                draw_solid_circle(img, p_2, 5, dlib::rgb_pixel(255, 0, 255));
             }
             else{
-                draw_solid_circle(img, p_, 3, dlib::rgb_pixel(0, 255, 255));
+                draw_solid_circle(img, p_1, 5, dlib::rgb_pixel(0, 255, 255));
+                draw_solid_circle(img, p_2, 5, dlib::rgb_pixel(0, 255, 255));
             }
             
         }
