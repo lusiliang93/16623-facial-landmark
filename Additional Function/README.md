@@ -1,7 +1,7 @@
 # Face Landmarking on iPhone with Smile Detection
 ## Screenshot
 
-![screenshot](WechatIMG2.jpeg)
+![screenshot](Screen Shot.png)
 
 ## Credits
 This version of app is based on the the basic version of facial landmark tracking app.
