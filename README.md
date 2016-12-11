@@ -46,7 +46,7 @@
  - Nov.28 - Dec.1 Add additional function like real-time head tracking by incorporating Smerk into the project. (Completed. Instead of Smerk, we've used functions in the class of AVMetadataface object)
  - Dec.2 - Dec.4 Create a simple UI. Benchmark speedup. (Half Completed. We've finished speed benchmark. But we do not have UI)
  - Dec.5 - Dec.7 Make a demo and prepare for the presentation (Completed)
- - Dec.8 - Dec. 11 Write final report
+ - Dec.8 - Dec. 11 Write final report(Completed)
 
 - References:
 
